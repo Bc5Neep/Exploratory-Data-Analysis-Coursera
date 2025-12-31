@@ -22,6 +22,8 @@ dev.off()
 
 #Assemble Plot4 from "plot2", "plot3", "Voltage", and "Global Reactive Power" 
 
+png("plot4.png", height = 480, width = 480)
+
 par(mfcol = c(2,2))
 
 plot(PC$DateTime, PC$Global_active_power, type = "l", xaxt = "n",  xlab = "day", ylab = "Global Active Power (in kilowatts)", main = "Power use by Minute")
@@ -34,8 +36,12 @@ lines(PC$DateTime, PC$Sub_metering_3, col = "blue")
 axis(side = 1, at = ticks, labels = labels)
 
 plot(PC$DateTime, PC$Voltage, type = "l", xaxt = "n", xlab = "datetime", ylab = "Voltage", main = "Voltage")
+axis(side = 1, at = ticks, labels = labels)
 
-plot(PC$DateTime, PC$Global_reactive_power, type = "l", xlab = "datetime", ylab = "Global Reactive Power", main = "Global Reactive Power")
+plot(PC$DateTime, PC$Global_reactive_power, type = "l", xaxt = "n", xlab = "datetime", ylab = "Global Reactive Power", main = "Global Reactive Power")
+axis(side = 1, at = ticks, labels = labels)
+
+
 
 dev.off()
 
