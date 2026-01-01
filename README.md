@@ -5,7 +5,7 @@ output: github_document
 
 
 
-## Explorartory Data Analysis Plot Project
+## Exploratory Data Analysis Plot Project
 
 This exercise is designed to practice plotting in base R. Using an open source dataset obtained from UCI Machine Learning Repository.
 
